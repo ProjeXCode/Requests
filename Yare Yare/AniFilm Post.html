@@ -1,0 +1,311 @@
+<html>
+    <head>
+        <script src='/js/3.4.1jquery.min.js'></script>
+        <style>
+            #basic_data{display: grid;grid-template-columns: repeat(auto-fit,minmax(200px,max-content));grid-gap: 15px 0;margin-bottom: 15px;}
+            #description{width:100%;height:200px;}
+            #download_data{margin-top:15px;}
+            #default{display:none;}
+            #result{height:500px;width:100%;}
+            #addres1,.del1,#addres2,.del2,#addres3,.del3,#btnresult{cursor:pointer;}
+            .gridbtn{display: grid;grid-template-columns: repeat(2,auto);grid-gap: 20px;margin:15px;}
+            .gridbtn div{background: blue;color: white;padding: 12px;text-align: center;border-radius: 8px;}
+            #btnresult{background: blue;text-align: center;font-size: 20px;padding: 15px;border-radius: 8px;color: white;margin-bottom: 15px;}
+            .datainfo_res1,.datainfo_res2,.datainfo_res3{display: grid;grid-template-columns: repeat(auto-fit,minmax(200px,auto));grid-gap: 20px;margin-bottom: 10px;}
+        #copied{border-radius: 8px;text-align: center;}
+        </style>
+    </head>
+    <body>
+<!-- Basic Data -->
+<div id='basic_data'>
+<div id='datainfo'>
+<div>Judul Anime :</div>
+<input id='title' placeholder='Judul Anime' type='text'/>
+</div>
+<div id='datainfo'>
+<div>URL Image Anime :</div>
+<input id='featuredImage' placeholder='URL Image Featured Image' type='url'/>
+</div>
+<div id='datainfo'>
+<div>URL Trailer Anime :</div>
+<input id='Trailer' placeholder='URL Trailer' type='text'/>
+</div>
+<div id='datainfo'>
+<div>Rating Value Anime :</div>
+<input id='ratingvalue' placeholder='Rating Value' type='text'/>
+</div>
+<div id='datainfo'>
+<div>Rating Count Anime :</div>
+<input id='ratingcount' placeholder='Rating Count' type='text'/>
+</div>
+<div id='datainfo'>
+<div>Persentase Bar Rating Anime :</div>
+<input id='rating_bar' placeholder='Persentase Bar Rating' type='text'/>
+</div>
+</div>
+<div id='datainfo'>
+<div>Deskripsi Anime :</div>
+<textarea id='description' placeholder='Deskripsi Anime' type='text'></textarea>
+</div>
+
+<!-- Download Data -->
+<div id='download_data'>
+<div id='datainfo'>
+<div>Episode :</div>
+<input id='eps' placeholder="Isi Eps saja 1-20"/>
+</div>
+<div id='datainfo'>
+<div>Resolusi 1 :</div>
+<input id='res1' placeholder="360p"/>
+<div>Size 1 :</div>
+<input id='size1' placeholder="1GB"/>
+<div class='gridbtn'>
+<div id='addres1'>Add Link Download</div>
+<div class='del1'>Kurangi Link</div>
+</div>
+<div id='btnres1'></div>
+</div>
+<div id='datainfo'>
+<div>Resolusi 2 :</div>
+<input id='res2' placeholder="480p"/>
+<div>Size 2 :</div>
+<input id='size2' placeholder="2GB"/>
+<div class='gridbtn'>
+<div id='addres2'>Add Link Download</div>
+<div class='del2'>Kurangi Link</div>
+</div>
+<div id='btnres2'></div>
+</div>
+<div id='datainfo'>
+<div>Resolusi 3 :</div>
+<input id='res3' placeholder="720p"/>
+<div>Size 3 :</div>
+<input id='size3' placeholder="3GB"/>
+<div class='gridbtn'>
+<div id='addres3'>Add Link Download</div>
+<div class='del3'>Kurangi Link</div>
+</div>
+<div id='btnres3'></div>
+</div>
+</div>
+<div id='default'>
+    <div id="information">
+        <div class="dagruel-sinopsis">    
+          <div class="left">      
+            <bingkai id="featImage">        
+              <div class="waluhImage"><img src="https://cdn.statically.io/img/i.postimg.cc/tJFm9bcJ/Mirai-Nikki.webp">          
+                <div class="rating-area">            
+                  <div class="rt" itemscope="itemscope" itemprop="aggregateRating" itemtype="//schema.org/AggregateRating">              
+                    <meta itemprop="worstRating" content="1">              
+                    <meta itemprop="bestRating" content="10">              
+                    <span itemprop="ratingValue">7.49</span>              
+                    /               
+                    <span itemprop="ratingCount">1661</span>              
+                    <div class="rateContent">                
+                      <div class="rating-bar">                  
+                        <span style="width: 69%;">                  
+                        </span>                
+                      </div>              
+                    </div>            
+                  </div>          
+                </div>        
+              </div>      
+            </bingkai>    
+          </div>    
+          <div class="right">      
+            <div class="sinojudul">        
+              <div class="judul">          
+                <h1>Mirai Nikki</h1>          
+                <span class="trailer"><a href="https://myanimelist.net/anime/10620/Mirai_Nikki_TV">            
+                  <svg style="width:14.63px;height:13px" viewBox="0 0 22 22">              
+                    <path fill="#1e88e5" d="M19.11 7.47145L15.59 3.95145C12.43 0.801451 10.77 1.96145 8.77005 3.95145L3.11005 9.61145C1.96005 10.7615 1.33005 11.5015 1.10005 12.3215C1.10005 12.3315 1.09005 12.3315 1.09005 12.3315C1.09005 12.3415 1.09005 12.3415 1.09005 12.3415C1.09005 12.3515 1.09005 12.3515 1.09005 12.3515V12.3815C0.680048 13.8415 1.76005 15.0815 3.11005 16.4315L6.64005 19.9415C7.90005 21.2115 8.92005 22.0015 10.05 22.0015C11.18 22.0015 12.15 21.2415 13.45 19.9415L19.11 14.2915C19.6 13.7915 19.96 13.3815 20.24 12.9915C20.24 12.9815 20.24 12.9815 20.24 12.9815C20.24 12.9815 20.24 12.9815 20.25 12.9815C21.53 11.1915 21.19 9.54145 19.11 7.47145ZM18.08 11.3715H18.07C17.77 11.3015 17.46 11.2415 17.15 11.1815C17.13 11.1815 17.11 11.1715 17.08 11.1715C16.38 11.0415 15.67 10.9315 14.95 10.8415H14.91C14.19 10.7515 13.46 10.6815 12.73 10.6415H12.65C12.01 10.6015 11.36 10.5815 10.72 10.5815C9.94005 10.5815 9.16005 10.6215 8.39005 10.6715C8.26005 10.6815 8.14005 10.6915 8.02005 10.7015C7.44005 10.7415 6.86005 10.8015 6.29005 10.8715C6.13005 10.8915 5.98005 10.9115 5.83005 10.9315C5.25005 11.0215 4.68005 11.1115 4.11005 11.2215C3.98005 11.2515 3.86005 11.2715 3.73005 11.2915C3.68005 11.3015 3.62005 11.3115 3.57005 11.3215C3.75005 11.1215 3.96005 10.9115 4.19005 10.6815L9.84005 5.03145C11.66 3.23145 12.28 2.80145 14.52 5.03145L18.03 8.55145C18.57 9.08145 18.93 9.53145 19.15 9.92145C19.15 9.92145 19.15 9.93145 19.16 9.93145C19.58 10.6615 18.9 11.5315 18.08 11.3715Z">
+                    </path>            
+                  </svg>Informasi</a>          
+                </span>        
+              </div>        
+              <div class="alternaiv">                                 
+              </div>      
+            </div> 
+            <p>
+            <div class="desc">        
+              <h3>Sinopsis</h3>        
+              <p>Yuki adalah seorang penyendiri yang tidak pandai bersosialisasi. Dia lebih suka menulis diari di ponsel dan berbicara dengan teman imajinasinya, Deus Ex Machina (Dewa Ruang dan Waktu). Setelah Deus membawanya berpartisipasi dalam pertempuran hidup mati dengan 11 orang lain, Ia menyadari kalau Deus bukanlah imajinasinya saja.</p>      
+            </div>      
+            <div class="genre-info">      
+            </div>    
+          </div>  
+        </div> 
+      <div id="download">  
+      <h2>Link Download Batch</h2>
+      <div class="mctnx">  
+        <div class="soraddl dlone">    
+          <div class="sorattl downSible">      
+            <h3>Download Mirai Nikki (01-26)</h3>    
+          </div>    
+          <div class="content">      
+            <div class="soraurl first">        
+              <div class="res">360p</div>        
+              <div class="slink">          
+
+              </div>        
+              <div class="res">0.9GB</div>      
+            </div>      
+            <div class="soraurl second">        
+              <div class="res">480p</div>        
+              <div class="slink">          
+
+              </div>        
+              <div class="res">1.6GB</div>      
+            </div>      
+            <div class="soraurl third">        
+              <div class="res">720p</div>        
+              <div class="slink">          
+
+              </div>        
+              <div class="res">3.3GB</div>      
+            </div>    
+          </div>  
+        </div>
+        </div>
+</div>
+</div>
+</div>
+<div id='btnresult'>Get Data</div>
+<div id='copied'></div>
+<textarea id='result'></textarea>
+<script>
+/* Append Link Download */
+$('#addres1').click(function(){
+$('#btnres1').append("<div class='datainfo_res1'>\
+<input class='media1' placeholder='Isi Nama Media Seperti GDrive'/>\
+<input class='link1' placeholder='Isi Download'/>\
+</div>")
+})
+$('#addres2').click(function(){
+$('#btnres2').append("<div class='datainfo_res2'>\
+<input class='media2' placeholder='Isi Nama Media Seperti GDrive'/>\
+<input class='link2' placeholder='Isi Download'/>\
+</div>")
+})
+$('#addres3').click(function(){
+$('#btnres3').append("<div class='datainfo_res3'>\
+<input class='media3' placeholder='Isi Nama Media Seperti GDrive'/>\
+<input class='link3' placeholder='Isi Download'/>\
+</div>")
+})
+
+/* Delete Input Data */
+$('.del1').each(function(){
+  $(this).click(function(){
+  var data = document.getElementsByClassName('datainfo_res1');
+  for(var i = 0; i < data.length;i++){
+   var datas = data[i];
+    }
+  datas.remove()
+  })
+});
+$('.del2').each(function(){
+  $(this).click(function(){
+  var data = document.getElementsByClassName('datainfo_res2');
+  for(var i = 0; i < data.length;i++){
+   var datas = data[i];
+    }
+  datas.remove()
+  })
+});
+$('.del3').each(function(){
+  $(this).click(function(){
+  var data = document.getElementsByClassName('datainfo_res3');
+  for(var i = 0; i < data.length;i++){
+   var datas = data[i];
+    }
+  datas.remove()
+  })
+});
+
+/* Executor Finishing */
+$('#btnresult').click(function(){
+/* Mengambil Data Dari Input */
+var title = $('#title').val(),
+description = $('#description').val(),
+link_image = $('#featuredImage').val(),
+link_trailer = $('#Trailer').val(),
+rating_value = $('#ratingvalue').val(),
+rating_count = $('#ratingcount').val(),
+rating_bar = $('#rating_bar').val(),
+eps = $('#eps').val(),
+res1 = $('#res1').val(),
+res2 = $('#res2').val(),
+res3 = $('#res3').val(),
+size1 = $('#size1').val(),
+size2 = $('#size2').val(),
+size3 = $('#size3').val();
+
+/* Data Download File */
+var addfirst = [],
+btnfirst = $('.datainfo_res1');
+for(var i = 0; i < btnfirst.length;i++){
+var media1 = document.getElementsByClassName('media1')[i].value;
+var link1 = document.getElementsByClassName('link1')[i].value;
+  addfirst.push('<a href="'+link1+'" target="_blank" rel="nofollow noopener noreferrer">'+media1+'</a>')
+}
+$('.first .slink').html(addfirst.join('\n'));
+var addsecond = [],
+btnsecond = $('.datainfo_res2');
+for(var i = 0; i < btnsecond.length;i++){
+var media2 = document.getElementsByClassName('media2')[i].value;
+var link2 = document.getElementsByClassName('link2')[i].value;
+addsecond.push('<a href="'+link2+'" target="_blank" rel="nofollow noopener noreferrer">'+media2+'</a>')
+}
+$('.second .slink').html(addsecond.join('\n'));
+var addthird = [],
+btnthird = $('.datainfo_res3');
+for(var i = 0; i < btnthird.length;i++){
+var media3 = document.getElementsByClassName('media3')[i].value;
+var link3 = document.getElementsByClassName('link3')[i].value;
+addthird.push('<a href="'+link3+'" target="_blank" rel="nofollow noopener noreferrer">'+media3+'</a>')
+}
+$('.third .slink').html(addthird.join('\n'));
+
+/* Menerapkan Data Yang Diambil kedalam Default Struktur Post */
+$('.judul h1').html(title);
+$('.desc p').html(description);
+$('.waluhImage img').attr('src',link_image);
+$('.trailer a').attr('href',link_trailer);
+$('.rt span[itemprop="ratingValue"]').html(rating_value);
+$('.rt span[itemprop="ratingCount"]').html(rating_count);
+$('.rating-bar span').attr('style','width:'+rating_bar);
+$('.sorattl h3').html('Download '+title+' ('+eps+')');
+$('.first .res:nth-child(1)').html(res1);
+$('.second .res:nth-child(1)').html(res2);
+$('.third .res:nth-child(1)').html(res3);
+$('.first .res:nth-child(2)').html(size1);
+$('.second .res:nth-child(2)').html(size2);
+$('.third .res:nth-child(2)').html(size3);
+
+/* Menampilkan Struktur Yang Sudah diterapkan Kedalam Textarea */
+$('#result').val($('#default').html());
+})
+
+/* Copied Value Result */
+$('#result').on("click",function(){
+    var copyText = document.getElementById("result");
+    var statues = document.getElementById('copied');
+    statues.style.marginBottom = '15px';
+    statues.style.padding = '15px';
+    if(!copyText.value){
+      statues.innerHTML = 'Not Copied, Field Empty'
+      statues.style.color = 'red';
+      statues.style.background = '#ffbdbd';
+    }else{
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    statues.innerHTML = 'Successfull Copied'
+    statues.style.color = 'Green';
+    statues.style.background = '#9cff9c';
+    }
+  })
+    </script>
+    </body>
+    </html>
